@@ -1,67 +1,112 @@
-const FacilitiesShowcase = () => {
-  const facilities = [
-    {
-      name: "Modern Classrooms",
-      description: "Equipped with the latest technology for interactive learning.",
-      icon: "fas fa-chalkboard-teacher",
-    },
-    {
-      name: "Advanced Laboratories",
-      description: "State-of-the-art labs for scientific research and experimentation.",
-      icon: "fas fa-flask",
-    },
-    {
-      name: "Extensive Library",
-      description: "A vast collection of books and resources for academic pursuits.",
-      icon: "fas fa-book",
-    },
-    {
-      name: "Sports Complex",
-      description: "Facilities for various sports and recreational activities.",
-      icon: "fas fa-futbol",
-    },
-    {
-      name: "Cafeteria",
-      description: "A comfortable space to relax and enjoy meals.",
-      icon: "fas fa-utensils",
-    },
-    {
-      name: "Auditorium",
-      description: "A large venue for events, performances, and presentations.",
-      icon: "fas fa-theater-masks",
-    },
-  ]
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { FlaskConical, Computer, BookOpen, Dumbbell, Utensils, TreePine } from "lucide-react"
 
+const facilities = [
+  {
+    icon: FlaskConical,
+    title: "Advanced Science Labs",
+    description:
+      "Fully equipped chemistry, physics, and biology laboratories with modern equipment, safety features, and digital microscopes.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-green-500 to-green-600",
+    bgGradient: "from-green-50 to-green-100",
+  },
+  {
+    icon: Computer,
+    title: "Technology Centers",
+    description:
+      "State-of-the-art computer labs with latest software, high-speed internet, and programming environments.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-emerald-500 to-emerald-600",
+    bgGradient: "from-emerald-50 to-emerald-100",
+  },
+  {
+    icon: BookOpen,
+    title: "Digital Library",
+    description:
+      "Extensive collection of books, digital resources, quiet study spaces, and research facilities for all students.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-teal-500 to-teal-600",
+    bgGradient: "from-teal-50 to-teal-100",
+  },
+  {
+    icon: Dumbbell,
+    title: "Sports Complex",
+    description:
+      "Indoor gymnasium, outdoor courts, swimming pool, fitness center, and facilities for various sports activities.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-green-500 to-green-600",
+    bgGradient: "from-green-50 to-green-100",
+  },
+  {
+    icon: Utensils,
+    title: "Modern Cafeteria",
+    description:
+      "Nutritious meals prepared fresh daily with options for various dietary requirements and healthy eating programs.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-amber-500 to-amber-600",
+    bgGradient: "from-amber-50 to-amber-100",
+  },
+  {
+    icon: TreePine,
+    title: "Green Spaces",
+    description:
+      "Beautiful gardens, outdoor classrooms, recreational areas, and eco-friendly spaces for relaxation and learning.",
+    image: "/placeholder.svg?height=200&width=300",
+    gradient: "from-emerald-500 to-emerald-600",
+    bgGradient: "from-emerald-50 to-emerald-100",
+  },
+]
+
+export function FacilitiesShowcase() {
   return (
-    <div className="bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 text-center">Our Facilities</h2>
-        <p className="mt-3 text-xl text-gray-500 sm:mt-4 text-center">
-          Explore our campus and discover the resources available to support your academic journey.
-        </p>
-        <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {facilities.map((facility, index) => (
-              <div key={index} className="relative">
-                <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-green-700">
-                    <i className={facility.icon + " fa-lg"}></i>
-                  </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{facility.name}</p>
-                </dt>
-                <dd className="mt-2 ml-16 text-base text-gray-500">{facility.description}</dd>
-              </div>
-            ))}
-          </dl>
+    <section className="py-24 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsUnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzlDOTJBQyIgZmlsbE9wYWNpdHk9IjAuMDUiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjIiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
+      <div className="container mx-auto px-4 relative">
+        <div className="text-center mb-20">
+          <Badge className="bg-white/80 text-green-700 mb-6 px-4 py-2 text-sm font-semibold shadow-sm">
+            🏗️ World-Class Facilities
+          </Badge>
+          <h2 className="text-5xl font-bold text-gray-900 mb-6">Everything Students Need to Excel</h2>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Our comprehensive facilities support every aspect of student development, from academic excellence to
+            physical fitness and creative expression.
+          </p>
         </div>
-        <div className="mt-8 text-center">
-          <button className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-            Learn More
-          </button>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {facilities.map((facility, index) => (
+            <Card
+              key={index}
+              className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm overflow-hidden"
+            >
+              <div className="relative">
+                <Image
+                  src={facility.image || "/placeholder.svg"}
+                  alt={facility.title}
+                  width={300}
+                  height={200}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${facility.bgGradient} opacity-20`}></div>
+                <div
+                  className={`absolute top-4 left-4 w-12 h-12 bg-gradient-to-br ${facility.gradient} rounded-xl flex items-center justify-center shadow-lg`}
+                >
+                  <facility.icon className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-700 transition-colors">
+                  {facility.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{facility.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
-
-export default FacilitiesShowcase
