@@ -6,10 +6,10 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Kadija Schooling System - Excellence in Education",
+  title: "Miss Khadija Schooling System - Guiding Young Minds",
   description:
-    "Providing world-class education that empowers students to excel academically, socially, and personally in a nurturing environment.",
-  keywords: "school, education, learning, students, academic excellence, Kadija",
+    "Providing world-class education that empowers students to excel academically, socially, and personally in a nurturing environment. Guiding Young Minds since 2009.",
+  keywords: "school, education, learning, students, academic excellence, Miss Khadija, MKSS, Guiding Young Minds",
     generator: 'v0.dev'
 }
 

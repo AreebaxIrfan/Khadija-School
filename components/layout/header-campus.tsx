@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeaderCampus() {
@@ -8,14 +7,18 @@ export function HeaderCampus() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <BookOpen className="w-7 h-7 text-white" />
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
+              <img
+                src="/images/school-logo.png"
+                alt="Miss Khadija Schooling System Logo"
+                className="w-12 h-12 object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
-                Kadija Schooling System
+                Miss Khadija Schooling System
               </h1>
-              <p className="text-xs text-gray-600 font-medium">Excellence in Education</p>
+              <p className="text-xs text-gray-600 font-medium">Guiding Young Minds</p>
             </div>
           </Link>
           <div className="hidden md:flex items-center space-x-8">

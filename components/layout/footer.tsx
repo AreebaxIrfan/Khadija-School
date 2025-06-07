@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
@@ -15,12 +15,16 @@ export function Footer() {
             {/* School Info */}
             <div className="lg:col-span-1 space-y-6">
               <div className="flex items-center space-x-3 group">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105">
-                  <BookOpen className="w-8 h-8 text-white" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 group-hover:scale-105 p-1">
+                  <img
+                    src="/images/school-logo.png"
+                    alt="Miss Khadija Schooling System Logo"
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Kadija Schooling System</h3>
-                  <p className="text-blue-300 text-sm font-medium">Excellence in Education</p>
+                  <h3 className="text-2xl font-bold text-white">Miss Khadija Schooling System</h3>
+                  <p className="text-blue-300 text-sm font-medium">Guiding Young Minds</p>
                 </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
@@ -91,7 +95,7 @@ export function Footer() {
                     <Mail className="w-5 h-5 text-green-400" />
                   </div>
                   <div>
-                    <p className="text-white font-semibold">info@kadijaschool.edu</p>
+                    <p className="text-white font-semibold">info@misskhadija.edu</p>
                     <p className="text-gray-400 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -158,7 +162,7 @@ export function Footer() {
         <div className="border-t border-gray-700 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-400">© 2024 Kadija Schooling System. All rights reserved.</p>
+              <p className="text-gray-400">© 2024 Miss Khadija Schooling System. All rights reserved.</p>
               <p className="text-gray-500 text-sm mt-1">Made with ❤️ for education and excellence</p>
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">

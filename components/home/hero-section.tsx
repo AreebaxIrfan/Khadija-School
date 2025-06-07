@@ -1,7 +1,7 @@
 "use client"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Users, Award, Star } from "lucide-react"
+import { Users, Award, Star, GraduationCap } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -28,7 +28,7 @@ export function HeroSection() {
                 <span className="text-gray-800">Leaders</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                At Kadija Schooling System, we provide world-class education that empowers students to excel
+                At Miss Khadija Schooling System, we provide world-class education that empowers students to excel
                 academically, socially, and personally in a nurturing, innovative environment.
               </p>
             </div>
@@ -40,7 +40,7 @@ export function HeroSection() {
                 className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-pulse"
                 onClick={() => (window.location.href = "/register")}
               >
-                <BookOpen className="w-8 h-8 mr-3 animate-bounce" />
+                <GraduationCap className="w-8 h-8 mr-3 animate-bounce" />
                 Join Our School Family
               </Button>
             </div>
