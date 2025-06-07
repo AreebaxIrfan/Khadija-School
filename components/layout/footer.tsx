@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Phone, Mail, MapPin, Send, ChevronRight } from "lucide-react"
+import { BookOpen, Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
@@ -43,7 +43,7 @@ export function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links - Removed bullet points */}
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-white mb-6 relative">
                 Quick Links
@@ -63,8 +63,7 @@ export function Footer() {
                       href={link.href}
                       className="text-gray-300 hover:text-white transition-all duration-300 flex items-center group"
                     >
-                      <ChevronRight className="w-4 h-4 mr-2 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                      {link.name}
+                      <span className="group-hover:translate-x-2 transition-transform duration-300">{link.name}</span>
                     </Link>
                   </li>
                 ))}
@@ -103,6 +102,24 @@ export function Footer() {
                   <div>
                     <p className="text-white font-semibold">123 Education Street</p>
                     <p className="text-gray-400 text-sm">Learning City, LC 12345</p>
+                  </div>
+                </div>
+
+                {/* WhatsApp Community Link */}
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                    <MessageCircle className="w-5 h-5 text-green-500" />
+                  </div>
+                  <div>
+                    <a
+                      href="https://chat.whatsapp.com/your-community-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white font-semibold hover:text-green-400 transition-colors"
+                    >
+                      Miss Khadija's WhatsApp Community
+                    </a>
+                    <p className="text-gray-400 text-sm">Join our educational community</p>
                   </div>
                 </div>
               </div>
