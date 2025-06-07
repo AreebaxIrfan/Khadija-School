@@ -7,13 +7,13 @@ import Link from "next/link"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-blue-100 z-50">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-green-100 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -22,19 +22,19 @@ export default function AboutPage() {
               </div>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="text-blue-600 font-medium">
+              <Link href="/about" className="text-green-600 font-medium">
                 About
               </Link>
-              <Link href="/campus" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/campus" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Campus
               </Link>
-              <Link href="/register" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/register" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Register
               </Link>
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
+              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
                 Contact Us
               </Button>
             </div>
@@ -103,7 +103,7 @@ export default function AboutPage() {
       </section>
 
       {/* History Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="bg-green-100 text-green-700 mb-4">Achievements</Badge>
@@ -262,7 +262,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Join Our Educational Community</h2>
           <p className="text-xl mb-8 opacity-90">

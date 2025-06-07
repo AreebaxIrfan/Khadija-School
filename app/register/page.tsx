@@ -65,13 +65,13 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-blue-100 z-50">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-green-100 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -80,19 +80,19 @@ export default function RegisterPage() {
               </div>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Home
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 About
               </Link>
-              <Link href="/campus" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              <Link href="/campus" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Campus
               </Link>
-              <Link href="/register" className="text-blue-600 font-medium">
+              <Link href="/register" className="text-green-600 font-medium">
                 Register
               </Link>
-              <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
+              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
                 Contact Us
               </Button>
             </div>
@@ -104,7 +104,7 @@ export default function RegisterPage() {
       <section className="pt-32 pb-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="bg-blue-100 text-blue-700 mb-4">Student Registration</Badge>
+            <Badge className="bg-green-100 text-green-700 mb-4">Student Registration</Badge>
             <h1 className="text-5xl font-bold text-gray-800 mb-6">Join Our School Community</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Begin your educational journey with us. Complete the registration form below to apply for admission.
@@ -121,7 +121,7 @@ export default function RegisterPage() {
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
                   step <= currentStep
-                    ? "bg-gradient-to-r from-blue-500 to-green-500 text-white"
+                    ? "bg-gradient-to-r from-green-500 to-emerald-500 text-white"
                     : "bg-gray-200 text-gray-500"
                 }`}
               >
@@ -130,7 +130,7 @@ export default function RegisterPage() {
               {step < 4 && (
                 <div
                   className={`w-16 h-1 mx-2 ${
-                    step < currentStep ? "bg-gradient-to-r from-blue-500 to-green-500" : "bg-gray-200"
+                    step < currentStep ? "bg-gradient-to-r from-green-500 to-emerald-500" : "bg-gray-200"
                   }`}
                 />
               )}
@@ -157,7 +157,7 @@ export default function RegisterPage() {
       <div className="container mx-auto px-4 pb-20">
         <div className="max-w-4xl mx-auto">
           <Card className="border-0 shadow-2xl">
-            <CardHeader className="bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-t-lg">
+            <CardHeader className="bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-t-lg">
               <CardTitle className="text-2xl text-center">Student Registration Form</CardTitle>
             </CardHeader>
             <CardContent className="p-8">
@@ -166,7 +166,7 @@ export default function RegisterPage() {
                 {currentStep === 1 && (
                   <div className="space-y-6">
                     <div className="flex items-center space-x-2 mb-6">
-                      <User className="w-6 h-6 text-blue-600" />
+                      <User className="w-6 h-6 text-green-600" />
                       <h3 className="text-2xl font-bold text-gray-800">Student Information</h3>
                     </div>
 
@@ -471,7 +471,7 @@ export default function RegisterPage() {
                         />
                         <Label htmlFor="terms" className="text-sm">
                           I agree to the{" "}
-                          <Link href="#" className="text-blue-600 hover:underline">
+                          <Link href="#" className="text-green-600 hover:underline">
                             Terms and Conditions
                           </Link>{" "}
                           *
@@ -485,7 +485,7 @@ export default function RegisterPage() {
                         />
                         <Label htmlFor="privacy" className="text-sm">
                           I agree to the{" "}
-                          <Link href="#" className="text-blue-600 hover:underline">
+                          <Link href="#" className="text-green-600 hover:underline">
                             Privacy Policy
                           </Link>{" "}
                           *
@@ -519,7 +519,7 @@ export default function RegisterPage() {
                     <Button
                       type="button"
                       onClick={nextStep}
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       Next Step
                     </Button>
@@ -527,7 +527,7 @@ export default function RegisterPage() {
                     <Button
                       type="submit"
                       disabled={!formData.termsAccepted || !formData.privacyAccepted}
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       Submit Application
                     </Button>

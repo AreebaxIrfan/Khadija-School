@@ -6,7 +6,7 @@ import { Users, Award, Star, GraduationCap } from "lucide-react"
 export function HeroSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-100/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-100/50"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-yellow-300 rounded-full opacity-60 animate-bounce"></div>
@@ -17,12 +17,12 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 px-6 py-3 text-base font-semibold animate-pulse">
+              <Badge className="bg-green-100 text-green-700 hover:bg-green-200 px-6 py-3 text-base font-semibold animate-pulse">
                 🌟 Award-Winning Education Since 2009
               </Badge>
               <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                 Nurturing
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block animate-pulse">
+                <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent block animate-pulse">
                   Tomorrow's
                 </span>
                 <span className="text-gray-800">Leaders</span>
@@ -37,7 +37,7 @@ export function HeroSection() {
             <div className="flex justify-center lg:justify-start pt-8">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-pulse"
+                className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-pulse"
                 onClick={() => (window.location.href = "/register")}
               >
                 <GraduationCap className="w-8 h-8 mr-3 animate-bounce" />
@@ -49,8 +49,8 @@ export function HeroSection() {
             <div className="flex items-center space-x-12 pt-8">
               <div className="text-center group cursor-pointer">
                 <div className="flex items-center justify-center mb-2">
-                  <Users className="w-8 h-8 text-blue-600 mr-2" />
-                  <p className="text-4xl font-bold text-blue-600 group-hover:scale-110 transition-transform">500+</p>
+                  <Users className="w-8 h-8 text-green-600 mr-2" />
+                  <p className="text-4xl font-bold text-green-600 group-hover:scale-110 transition-transform">500+</p>
                 </div>
                 <p className="text-gray-600 font-medium">Happy Students</p>
               </div>
@@ -75,7 +75,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative z-10 group">
               {/* Main Student Image */}
-              <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+              <div className="relative bg-gradient-to-br from-green-100 to-emerald-100 rounded-3xl p-8 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
                   {/* Real student image */}
                   <div className="flex justify-center items-center">
@@ -107,7 +107,7 @@ export function HeroSection() {
             </div>
 
             {/* Background decorative elements */}
-            <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-blue-200 to-purple-300 rounded-3xl -z-10 opacity-60 animate-pulse"></div>
+            <div className="absolute -top-6 -right-6 w-full h-full bg-gradient-to-br from-green-200 to-emerald-300 rounded-3xl -z-10 opacity-60 animate-pulse"></div>
             <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full -z-10 opacity-40 animate-bounce"></div>
             <div className="absolute top-10 -left-4 w-24 h-24 bg-gradient-to-br from-green-300 to-blue-400 rounded-2xl -z-10 opacity-60 rotate-12 animate-pulse"></div>
           </div>

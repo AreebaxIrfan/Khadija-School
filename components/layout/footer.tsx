@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsT3BhY2l0eT0iMC4wMyIgZmlsbFJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIiLz48L2c+PC9zdmc+')] opacity-50"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsT3BhY2l0eT0iMC4wMyIgZmlsbFJ1bGU9ImV2ZW5vZGQiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIiLz48L2c+PC9zdnZn')] opacity-50"></div>
 
       <div className="container mx-auto px-4 relative">
         {/* Main Footer Content */}
@@ -24,7 +24,7 @@ export function Footer() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Miss Khadija Schooling System</h3>
-                  <p className="text-blue-300 text-sm font-medium">Guiding Young Minds</p>
+                  <p className="text-green-300 text-sm font-medium">Guiding Young Minds</p>
                 </div>
               </div>
               <p className="text-gray-300 leading-relaxed">
@@ -51,7 +51,7 @@ export function Footer() {
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-white mb-6 relative">
                 Quick Links
-                <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+                <div className="absolute bottom-0 left-0 w-12 h-1 bg-gradient-to-r from-green-500 to-green-700 rounded-full"></div>
               </h4>
               <ul className="space-y-4">
                 {[
@@ -82,8 +82,8 @@ export function Footer() {
               </h4>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
-                    <Phone className="w-5 h-5 text-blue-400" />
+                  <div className="w-10 h-10 bg-green-600/20 rounded-lg flex items-center justify-center group-hover:bg-green-600/30 transition-colors">
+                    <Phone className="w-5 h-5 text-green-400" />
                   </div>
                   <div>
                     <p className="text-white font-semibold">+1 (555) 123-4567</p>
@@ -143,9 +143,9 @@ export function Footer() {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 rounded-l-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-gray-700 transition-all"
+                    className="flex-1 px-4 py-3 rounded-l-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-green-500 focus:bg-gray-700 transition-all"
                   />
-                  <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-l-none rounded-r-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 rounded-l-none rounded-r-xl px-6 shadow-lg hover:shadow-xl transition-all duration-300">
                     <Send className="w-4 h-4" />
                   </Button>
                 </div>

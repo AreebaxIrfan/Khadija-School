@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     shortcut: "/favicon.ico",
   },
+  theme_color: "#059669",
     generator: 'v0.dev'
 }
 
@@ -35,7 +36,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
         <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#059669" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className={inter.className}>{children}</body>

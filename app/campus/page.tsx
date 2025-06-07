@@ -9,7 +9,7 @@ import { Footer } from "@/components/layout/footer"
 
 export default function CampusPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100">
       {/* Navigation */}
       <HeaderCampus />
 
