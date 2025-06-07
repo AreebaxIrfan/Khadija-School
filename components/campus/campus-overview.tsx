@@ -8,28 +8,47 @@ export function CampusOverview() {
     <section className="py-24 bg-white relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-green-50/30 to-transparent"></div>
       <div className="container mx-auto px-4 relative">
-        {/* Main Campus */}
+        {/* School Overview Banner */}
+        <div className="text-center mb-20">
+          <Image
+            src="/images/school-campuses.jpg"
+            alt="Miss Khadija Schooling System - Two Campuses"
+            width={1200}
+            height={800}
+            className="rounded-3xl shadow-2xl mx-auto mb-8"
+          />
+          <Badge className="bg-green-100 text-green-700 mb-4 px-6 py-3 text-lg font-semibold">
+            Two Campuses, One Commitment
+          </Badge>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Excellence, Innovation and Values</h1>
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            Alhamdulillah, Miss Khadija Schooling System, with its two campuses, continues to set new benchmarks in
+            quality education, moral values and student empowerment for a promising future.
+          </p>
+        </div>
+
+        {/* Campus 1 - Gulshan E Noor */}
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
           <div className="space-y-8">
             <div>
-              <Badge className="bg-green-100 text-green-700 mb-4 px-4 py-2 font-semibold">Main Campus</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Central Learning Hub</h2>
+              <Badge className="bg-green-100 text-green-700 mb-4 px-4 py-2 font-semibold">Campus 1</Badge>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Gulshan E Noor Campus</h2>
               <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                Our flagship campus spans 10 acres of beautifully landscaped grounds, featuring modern architecture and
-                cutting-edge facilities. From advanced science laboratories to spacious classrooms, every space is
-                designed to inspire learning and creativity.
+                Our primary campus located at Gulshan E Noor PMT Road features modern classrooms, advanced science
+                laboratories, and comprehensive facilities designed to foster academic excellence and character
+                development.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl">
                 <Users className="w-8 h-8 text-green-600 mb-3" />
-                <p className="text-2xl font-bold text-green-700">300+</p>
+                <p className="text-2xl font-bold text-green-700">500+</p>
                 <p className="text-gray-600 font-medium">Students</p>
               </div>
               <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-2xl">
                 <Award className="w-8 h-8 text-emerald-600 mb-3" />
-                <p className="text-2xl font-bold text-emerald-700">25+</p>
+                <p className="text-2xl font-bold text-emerald-700">20+</p>
                 <p className="text-gray-600 font-medium">Classrooms</p>
               </div>
             </div>
@@ -40,8 +59,8 @@ export function CampusOverview() {
                   <MapPin className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">123 Education Street</p>
-                  <p className="text-gray-600">Learning City, LC 12345</p>
+                  <p className="font-semibold text-gray-800">Gulshan E Noor PMT Road</p>
+                  <p className="text-gray-600">Primary Campus Location</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
@@ -49,8 +68,8 @@ export function CampusOverview() {
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">+1 (555) 123-4567</p>
-                  <p className="text-gray-600">Main Campus Office</p>
+                  <p className="font-semibold text-gray-800">+92 (XXX) XXX-XXXX</p>
+                  <p className="text-gray-600">Campus 1 Office</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
@@ -58,7 +77,7 @@ export function CampusOverview() {
                   <Clock className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">8:00 AM - 4:00 PM</p>
+                  <p className="font-semibold text-gray-800">8:00 AM - 2:00 PM</p>
                   <p className="text-gray-600">Monday to Friday</p>
                 </div>
               </div>
@@ -82,11 +101,12 @@ export function CampusOverview() {
           <div className="relative">
             <div className="relative z-10 group">
               <Image
-                src="/placeholder.svg?height=600&width=700"
-                alt="Main Campus Building"
+                src="/images/school-campuses.jpg"
+                alt="Campus 1 - Gulshan E Noor"
                 width={700}
                 height={600}
-                className="rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500"
+                className="rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 object-cover"
+                style={{ objectPosition: "25% center" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-3xl"></div>
             </div>
@@ -95,16 +115,17 @@ export function CampusOverview() {
           </div>
         </div>
 
-        {/* North Campus */}
+        {/* Campus 2 - Gulshan E Taufeeq */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="relative z-10 group">
               <Image
-                src="/placeholder.svg?height=600&width=700"
-                alt="North Campus Innovation Center"
+                src="/images/school-campuses.jpg"
+                alt="Campus 2 - Gulshan E Taufeeq"
                 width={700}
                 height={600}
-                className="rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500"
+                className="rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 object-cover"
+                style={{ objectPosition: "75% center" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent rounded-3xl"></div>
             </div>
@@ -114,25 +135,25 @@ export function CampusOverview() {
 
           <div className="space-y-8 order-1 lg:order-2">
             <div>
-              <Badge className="bg-green-100 text-green-700 mb-4 px-4 py-2 font-semibold">North Campus</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Innovation & STEM Center</h2>
+              <Badge className="bg-green-100 text-green-700 mb-4 px-4 py-2 font-semibold">Campus 2</Badge>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Gulshan E Taufeeq Campus</h2>
               <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                Our cutting-edge North Campus focuses on STEM education and innovation. With specialized laboratories,
-                maker spaces, and technology centers, it's where our students explore the frontiers of science,
-                technology, engineering, and mathematics.
+                Our secondary campus near PSO Pump in Gulshan E Taufeeq offers expanded facilities with modern
+                infrastructure, specialized laboratories, and enhanced learning environments to accommodate our growing
+                student community.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl">
                 <Award className="w-8 h-8 text-green-600 mb-3" />
-                <p className="text-2xl font-bold text-green-700">8</p>
-                <p className="text-gray-600 font-medium">Science Labs</p>
+                <p className="text-2xl font-bold text-green-700">300+</p>
+                <p className="text-gray-600 font-medium">Students</p>
               </div>
               <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 p-6 rounded-2xl">
                 <Users className="w-8 h-8 text-emerald-600 mb-3" />
-                <p className="text-2xl font-bold text-emerald-700">5</p>
-                <p className="text-gray-600 font-medium">Tech Centers</p>
+                <p className="text-2xl font-bold text-emerald-700">15+</p>
+                <p className="text-gray-600 font-medium">Classrooms</p>
               </div>
             </div>
 
@@ -142,8 +163,8 @@ export function CampusOverview() {
                   <MapPin className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">456 Innovation Drive</p>
-                  <p className="text-gray-600">Tech Valley, TV 67890</p>
+                  <p className="font-semibold text-gray-800">Gulshan E Taufeeq Near PSO Pump</p>
+                  <p className="text-gray-600">Secondary Campus Location</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
@@ -151,8 +172,8 @@ export function CampusOverview() {
                   <Phone className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">+1 (555) 987-6543</p>
-                  <p className="text-gray-600">North Campus Office</p>
+                  <p className="font-semibold text-gray-800">+92 (XXX) XXX-XXXX</p>
+                  <p className="text-gray-600">Campus 2 Office</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl">
@@ -160,7 +181,7 @@ export function CampusOverview() {
                   <Clock className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-800">8:30 AM - 5:00 PM</p>
+                  <p className="font-semibold text-gray-800">8:00 AM - 2:00 PM</p>
                   <p className="text-gray-600">Monday to Friday</p>
                 </div>
               </div>
