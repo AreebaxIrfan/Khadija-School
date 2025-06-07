@@ -1,89 +1,80 @@
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Play, FlaskConical, Clock } from "lucide-react"
-
-export function VirtualTours() {
+const VirtualTours = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="bg-white py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge className="bg-blue-100 text-blue-700 mb-6 px-4 py-2 text-sm font-semibold">
-            🎥 Virtual Experience
-          </Badge>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Explore Our Campus Online</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Take immersive virtual tours of our beautiful campuses and see our world-class facilities in action.
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-semibold text-gray-800">Explore Our Campus Virtually</h2>
+          <p className="text-gray-600 mt-2">
+            Take a virtual tour and discover our state-of-the-art facilities and vibrant campus life.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group">
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Main Campus Virtual Tour"
-                width={600}
-                height={400}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                <Button size="lg" className="bg-white/90 text-gray-800 hover:bg-white shadow-xl">
-                  <Play className="w-6 h-6 mr-2" />
-                  Tour Main Campus
-                </Button>
-              </div>
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-blue-600 text-white">360° View</Badge>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Virtual Tour Card 1 */}
+          <div className="rounded-lg shadow-md overflow-hidden">
+            <img src="https://via.placeholder.com/600x400" alt="Campus Tour 1" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Science Labs</h3>
+              <p className="text-gray-600 mb-3">
+                Explore our cutting-edge science labs equipped with the latest technology.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 text-green-700 text-sm font-medium py-1 px-2 rounded-full">Featured</span>
+                <a
+                  href="#"
+                  className="inline-block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >
+                  Take a Tour
+                </a>
               </div>
             </div>
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Main Campus Experience</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Explore our primary campus with classrooms, administrative offices, library, cafeteria, and recreational
-                facilities. See where learning comes to life every day.
-              </p>
-              <div className="flex items-center mt-4 text-sm text-gray-500">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>15-minute interactive tour</span>
-              </div>
-            </CardContent>
-          </Card>
+          </div>
 
-          <Card className="overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 group">
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="North Campus Virtual Tour"
-                width={600}
-                height={400}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/30 transition-colors">
-                <Button size="lg" className="bg-white/90 text-gray-800 hover:bg-white shadow-xl">
-                  <FlaskConical className="w-6 h-6 mr-2" />
-                  Tour Innovation Center
-                </Button>
-              </div>
-              <div className="absolute top-4 right-4">
-                <Badge className="bg-green-600 text-white">STEM Focus</Badge>
+          {/* Virtual Tour Card 2 */}
+          <div className="rounded-lg shadow-md overflow-hidden">
+            <img src="https://via.placeholder.com/600x400" alt="Campus Tour 2" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Library & Learning Center</h3>
+              <p className="text-gray-600 mb-3">Discover our extensive library and collaborative learning spaces.</p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 text-green-700 text-sm font-medium py-1 px-2 rounded-full">New</span>
+                <a
+                  href="#"
+                  className="inline-block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >
+                  Take a Tour
+                </a>
               </div>
             </div>
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Innovation Center Tour</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Discover our cutting-edge North Campus with advanced laboratories, technology centers, maker spaces, and
-                innovation hubs designed for 21st-century learning.
-              </p>
-              <div className="flex items-center mt-4 text-sm text-gray-500">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>12-minute guided experience</span>
+          </div>
+
+          {/* Virtual Tour Card 3 */}
+          <div className="rounded-lg shadow-md overflow-hidden">
+            <img src="https://via.placeholder.com/600x400" alt="Campus Tour 3" className="w-full h-48 object-cover" />
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">Student Union</h3>
+              <p className="text-gray-600 mb-3">Experience the heart of campus life at our vibrant student union.</p>
+              <div className="flex items-center justify-between">
+                <span className="bg-green-100 text-green-700 text-sm font-medium py-1 px-2 rounded-full">Popular</span>
+                <a
+                  href="#"
+                  className="inline-block bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                >
+                  Take a Tour
+                </a>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <a href="#" className="inline-block text-green-600 hover:underline font-semibold">
+            View All Virtual Tours
+          </a>
         </div>
       </div>
     </section>
   )
 }
+
+export default VirtualTours
