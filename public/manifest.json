@@ -1,0 +1,27 @@
+{
+  "name": "Miss Khadija Schooling System",
+  "short_name": "MKSS",
+  "description": "Guiding Young Minds - Excellence in Education",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/school-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/school-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "school"],
+  "lang": "en",
+  "dir": "ltr"
+}
