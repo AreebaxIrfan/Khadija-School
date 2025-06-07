@@ -77,27 +77,18 @@ export function HeroSection() {
               {/* Main Student Image */}
               <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 shadow-2xl group-hover:shadow-3xl transition-all duration-500">
                 <div className="bg-white rounded-2xl p-6 shadow-lg">
-                  {/* Avatar-style student illustration */}
-                  <div className="flex justify-center items-center h-96">
+                  {/* Real student image */}
+                  <div className="flex justify-center items-center">
                     <div className="relative">
-                      {/* Student with school bag illustration */}
-                      <div className="w-64 h-64 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full flex items-center justify-center relative overflow-hidden">
-                        {/* Student face */}
-                        <div className="w-48 h-48 bg-gradient-to-br from-pink-200 to-pink-300 rounded-full relative">
-                          {/* Eyes */}
-                          <div className="absolute top-16 left-12 w-4 h-4 bg-black rounded-full"></div>
-                          <div className="absolute top-16 right-12 w-4 h-4 bg-black rounded-full"></div>
-                          {/* Smile */}
-                          <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-8 h-4 border-b-4 border-black rounded-full"></div>
-                        </div>
-                        {/* School bag */}
-                        <div className="absolute -bottom-8 -right-8 w-20 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg transform rotate-12">
-                          <div className="w-full h-4 bg-blue-700 rounded-t-lg"></div>
-                          <div className="absolute top-2 left-2 w-4 h-4 bg-yellow-400 rounded-full"></div>
-                        </div>
-                      </div>
+                      <img
+                        src="/images/student-uniform.png"
+                        alt="Student in school uniform"
+                        className="rounded-2xl shadow-lg transform transition-transform duration-500 group-hover:scale-105"
+                        width={400}
+                        height={500}
+                      />
 
-                      {/* Books floating around */}
+                      {/* Decorative elements */}
                       <div className="absolute -top-4 -left-4 w-8 h-10 bg-red-400 rounded transform -rotate-12 animate-bounce"></div>
                       <div className="absolute -top-2 -right-6 w-8 h-10 bg-green-400 rounded transform rotate-12 animate-bounce delay-150"></div>
                       <div className="absolute -bottom-4 left-4 w-8 h-10 bg-blue-400 rounded transform rotate-6 animate-bounce delay-300"></div>
