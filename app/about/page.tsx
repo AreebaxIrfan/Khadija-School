@@ -1,56 +1,28 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Users, Award, Target, Eye, Heart, Star, ChevronRight } from "lucide-react"
+import { BookOpen, Users, Award, Target, Eye, Heart, Star, ChevronRight, Phone, Mail, MapPin, Send } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { CTASection } from "@/components/home/cta-section"
+import { HeaderCampus } from "@/components/layout/header-campus"
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
+    <div className="min-h-screen bg-green-100 ">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-green-100 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                <BookOpen className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-800">Kadija Schooling System</h1>
-                <p className="text-xs text-gray-600">Excellence in Education</p>
-              </div>
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-green-600 font-medium">
-                About
-              </Link>
-              <Link href="/campus" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Campus
-              </Link>
-              <Link href="/register" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Register
-              </Link>
-              <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <HeaderCampus />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-4">
+      <section className="pt-32 pb-2">
+        <div className="container px-4">
           <div className="text-center mb-16">
-            <Badge className="bg-blue-100 text-blue-700 mb-4">About Us</Badge>
+            <Badge className="bg-green-100 text-green-700 mb-4">About Us</Badge>
             <h1 className="text-5xl font-bold text-gray-800 mb-6">Our Story & Mission</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              For over 15 years, Kadija Schooling System has been dedicated to providing exceptional education that
+              For over 3+ years, Kadija Schooling System has been dedicated to providing exceptional education that
               nurtures young minds and builds tomorrow's leaders.
             </p>
           </div>
@@ -103,77 +75,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* History Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="bg-green-100 text-green-700 mb-4">Our History</Badge>
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">15+ Years of Educational Excellence</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                    2009
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Foundation</h4>
-                    <p className="text-gray-600">
-                      Kadija Schooling System was established with a vision to provide quality education to the
-                      community.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
-                    2015
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Expansion</h4>
-                    <p className="text-gray-600">
-                      Opened our second campus and introduced advanced STEM programs and modern facilities.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    2020
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Innovation</h4>
-                    <p className="text-gray-600">
-                      Pioneered digital learning initiatives and received accreditation for educational excellence.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">
-                    2024
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800">Present</h4>
-                    <p className="text-gray-600">
-                      Continuing to lead in educational innovation with 500+ students and 50+ dedicated faculty members.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="School history and achievements"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-4 -right-4 w-full h-full bg-gradient-to-br from-blue-200 to-green-200 rounded-2xl -z-10"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Leadership Team */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-blue-100 to-green-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="bg-blue-100 text-blue-700 mb-4">Leadership</Badge>
@@ -185,7 +88,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Dr. Amina Kadija",
+                name: "Umer Khan",
                 role: "Founder & Principal",
                 image: "/placeholder.svg?height=300&width=300",
                 bio: "With over 20 years in education, Dr. Kadija founded the school with a vision to transform learning.",
@@ -231,7 +134,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-20 bg-gradient-to-br from-blue-100 to-green-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="bg-green-100 text-green-700 mb-4">Achievements</Badge>
@@ -263,37 +166,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Join Our Educational Community</h2>
-          <p className="text-xl mb-8 opacity-90">
-            Experience the difference of quality education at Kadija Schooling System
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/campus">
-              <Button
-                size="lg"
-                className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Visit Our Campus
-              </Button>
-            </Link>
-            <Link href="/register">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-700 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Apply Now
-                <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+     <CTASection/>
 
       {/* Footer */}
-      <Footer />
+     <Footer/>
     </div>
   )
 }

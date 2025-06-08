@@ -6,23 +6,23 @@ import { Users, Award, Star, GraduationCap } from "lucide-react"
 export function HeroSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-100/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-blue-100/50"></div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-yellow-300 rounded-full opacity-60 animate-bounce"></div>
-      <div className="absolute top-40 right-20 w-12 h-12 bg-pink-300 rounded-full opacity-50 animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-12 h-12 bg-blue-300 rounded-full opacity-50 animate-pulse"></div>
       <div className="absolute bottom-20 left-20 w-20 h-20 bg-green-300 rounded-full opacity-40 animate-bounce delay-300"></div>
 
       <div className="container mx-auto px-4 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <Badge className="bg-green-100 text-green-700 hover:bg-green-200 px-6 py-3 text-base font-semibold animate-pulse">
-                🌟 Award-Winning Education Since 2009
+              <Badge className="bg-green-100 text-blue-700 hover:bg-blue-200 px-6 py-3 text-base font-semibold animate-pulse">
+                🌱 Growing Genius Since 2022
               </Badge>
               <h1 className="text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                 Nurturing
-                <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent block animate-pulse">
+                <span className="bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent block animate-pulse">
                   Tomorrow's
                 </span>
                 <span className="text-gray-800">Leaders</span>
@@ -37,7 +37,7 @@ export function HeroSection() {
             <div className="flex justify-center lg:justify-start pt-8">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-pulse"
+                className="bg-gradient-to-r from-green-600 via-cyan-600 to-blue-600 hover:from-green-700 hover:via-emerald-700 hover:to-teal-700 text-white px-12 py-6 text-xl font-bold shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-105 animate-pulse"
                 onClick={() => (window.location.href = "/register")}
               >
                 <GraduationCap className="w-8 h-8 mr-3 animate-bounce" />
@@ -56,15 +56,15 @@ export function HeroSection() {
               </div>
               <div className="text-center group cursor-pointer">
                 <div className="flex items-center justify-center mb-2">
-                  <Award className="w-8 h-8 text-green-600 mr-2" />
-                  <p className="text-4xl font-bold text-green-600 group-hover:scale-110 transition-transform">50+</p>
+                  <Award className="w-8 h-8 text-blue-600 mr-2" />
+                  <p className="text-4xl font-bold text-blue-600 group-hover:scale-110 transition-transform">50+</p>
                 </div>
                 <p className="text-gray-600 font-medium">Expert Teachers</p>
               </div>
               <div className="text-center group cursor-pointer">
                 <div className="flex items-center justify-center mb-2">
-                  <Star className="w-8 h-8 text-yellow-600 mr-2" />
-                  <p className="text-4xl font-bold text-yellow-600 group-hover:scale-110 transition-transform">15+</p>
+                  <Star className="w-8 h-8 text-yellow-500 mr-2" />
+                  <p className="text-4xl font-bold text-yellow-500 group-hover:scale-110 transition-transform">15+</p>
                 </div>
                 <p className="text-gray-600 font-medium">Years Excellence</p>
               </div>

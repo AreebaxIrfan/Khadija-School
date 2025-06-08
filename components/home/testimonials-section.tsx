@@ -31,11 +31,11 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-sky-50 to-cyan-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsUnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iIzlDOTJBQyIgZmlsbE9wYWNpdHk9IjAuMDUiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMzAiIHI9IjIiLz48L2c+PC9nPjwvc3ZnPg==')]"></div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-20">
-          <Badge className="bg-white/80 text-green-700 mb-6 px-4 py-2 text-sm font-semibold shadow-sm">
+          <Badge className="bg-white/80 text-blue-700 mb-6 px-4 py-2 text-sm font-semibold shadow-sm">
             Student & Parent Voices
           </Badge>
           <h2 className="text-5xl font-bold text-gray-900 mb-6">What Our Community Says</h2>

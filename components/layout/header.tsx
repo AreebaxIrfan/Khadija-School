@@ -1,9 +1,19 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-xl border-green-100/50 z-50 transition-all duration-300 shadow-sm">
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-xl border-b border-green-100/50 z-50 transition-all duration-300 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
@@ -21,6 +31,15 @@ export function Header() {
               <p className="text-xs text-gray-600 font-medium">Guiding Young Minds</p>
             </div>
           </Link>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <Button variant="ghost" size="sm" onClick={toggleMobileMenu}>
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </Button>
+          </div>
+
+          {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -53,6 +72,44 @@ export function Header() {
             </Link>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md rounded-b-lg overflow-hidden">
+            <div className="px-4 py-6 flex flex-col space-y-4">
+              <Link
+                href="/"
+                className="block text-gray-700 hover:text-green-600 font-medium py-2 px-4 transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="block text-gray-700 hover:text-green-600 font-medium py-2 px-4 transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="/campus"
+                className="block text-gray-700 hover:text-green-600 font-medium py-2 px-4 transition-colors"
+              >
+                Campus
+              </Link>
+              <Link
+                href="/register"
+                className="block text-gray-700 hover:text-green-600 font-medium py-2 px-4 transition-colors"
+              >
+                Register
+              </Link>
+              <Link
+                href="/contact"
+                className="block text-gray-700 hover:text-green-600 font-medium py-2 px-4 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   )
