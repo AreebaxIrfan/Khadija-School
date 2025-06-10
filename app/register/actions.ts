@@ -10,13 +10,14 @@ interface RegistrationData {
   gender: string
   grade: string
   previousSchool: string
-
+  studentCnic: string
   // Parent/Guardian Information
   parentFirstName: string
   parentLastName: string
   relationship: string
   parentEmail: string
   parentPhone: string
+  parentCnic: string
   address: string
   city: string
   zipCode: string
@@ -40,11 +41,13 @@ export async function submitRegistration(formData: FormData) {
     gender: formData.get("gender") as string,
     grade: formData.get("grade") as string,
     previousSchool: formData.get("previousSchool") as string,
+    studentCnic: formData.get("studentCnic") as string,
     parentFirstName: formData.get("parentFirstName") as string,
     parentLastName: formData.get("parentLastName") as string,
     relationship: formData.get("relationship") as string,
     parentEmail: formData.get("parentEmail") as string,
     parentPhone: formData.get("parentPhone") as string,
+    parentCnic: formData.get("parentCnic") as string,
     address: formData.get("address") as string,
     city: formData.get("city") as string,
     zipCode: formData.get("zipCode") as string,
