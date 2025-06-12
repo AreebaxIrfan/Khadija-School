@@ -11,7 +11,7 @@ const campusStats = [
 
 export function CampusHero() {
   return (
-    <section className="pt-32 pb-20 relative overflow-hidden">
+    <section className="pt-12 pb-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-100/50"></div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
@@ -20,11 +20,11 @@ export function CampusHero() {
           </Badge>
           <h1 className="text-6xl font-bold text-gray-900 mb-6">
             World-Class
-            <span className="bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r  from-green-600 to-green-800 bg-clip-text text-transparent block">
               Learning Environment
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-4xl mt-6 mx-auto leading-relaxed">
             Explore our state-of-the-art campuses designed to inspire learning, creativity, and personal growth. Every
             space is thoughtfully crafted to provide the best educational experience.
           </p>

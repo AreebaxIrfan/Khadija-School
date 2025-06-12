@@ -5,51 +5,12 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Users, Award } from "lucide-react"
-import Link from "next/link"
 import { Footer } from "@/components/layout/footer"
+import { CTASection } from "@/components/home/cta-section"
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md border-b border-green-100 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1">
-                <img
-                  src="/images/school-logo.png"
-                  alt="Miss Khadija Schooling System Logo"
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-800">Miss Khadija Schooling System</h1>
-                <p className="text-xs text-gray-600">Guiding Young Minds</p>
-              </div>
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                About
-              </Link>
-              <Link href="/campus" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Campus
-              </Link>
-              <Link href="/register" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
-                Register
-              </Link>
-              <Link href="/contact">
-                <Button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-6">
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="pt-32 pb-20">
@@ -258,33 +219,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Ready to Join Our School Family?</h2>
-          <p className="text-xl mb-8 opacity-90">Take the first step towards your child's bright future</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/campus">
-              <Button
-                size="lg"
-                className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Visit Campus
-              </Button>
-            </Link>
-            <Link href="/register">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-green-700 px-8 py-3 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                Apply Now
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
+        <CTASection />
+     
       {/* Footer */}
       <Footer />
     </div>

@@ -12,9 +12,7 @@ import { HeaderCampus } from "@/components/layout/header-campus"
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-green-100 ">
-      {/* Navigation */}
-      <HeaderCampus />
-
+     
       {/* Hero Section */}
       <section className="pt-32 pb-2">
         <div className="container px-4">

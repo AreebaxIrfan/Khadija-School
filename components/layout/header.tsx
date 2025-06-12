@@ -1,21 +1,22 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from "react"
 import { Phone, Mail, MapPin } from "lucide-react"
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   useEffect(() => {
+    // Optional: Only add scroll listener if needed for specific effects
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      // Add scroll-based logic here if needed (e.g., shadow intensity)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -37,20 +38,22 @@ export function Header() {
                 <span>info@misskhadija.edu.pk</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4porté
+
+System: h-4" />
                 <span>Karachi, Pakistan</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <span>Follow Us:</span>
               <div className="flex space-x-2">
-                <a href="#" className="hover:text-green-200 transition-colors">
+                <a href="#" className="hover:text-green-200 transition-colors" aria-label="Facebook">
                   Facebook
                 </a>
-                <a href="#" className="hover:text-green-200 transition-colors">
+                <a href="#" className="hover:text-green-200 transition-colors" aria-label="Instagram">
                   Instagram
                 </a>
-                <a href="#" className="hover:text-green-200 transition-colors">
+                <a href="#" className="hover:text-green-200 transition-colors" aria-label="Twitter">
                   Twitter
                 </a>
               </div>
@@ -60,25 +63,21 @@ export function Header() {
       </div>
 
       {/* Main Navigation */}
-      <nav
-        className={`fixed top-0 lg:top-10 w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-green-100/50"
-            : "bg-white/95 backdrop-blur-xl border-b border-green-100/50"
-        }`}
-      >
+      <nav className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg border-b border-green-100/50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3 group">
+            <Link href="/" className="flex items-center space-x-3 group" aria-label="Miss Khadija Schooling System">
               <div className="relative">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50">
-                  <img
+                  <Image
                     src="/images/school-logo.png"
                     alt="Miss Khadija Schooling System Logo"
-                    className="w-12 h-12 object-contain"
+                    width={48}
+                    height={48}
+                    className="object-contain"
                   />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full group-hover:scale-110 transition-transform duration-300"></div>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-800 group-hover:text-green-600 transition-colors">
@@ -89,26 +88,28 @@ export function Header() {
             </Link>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileMenu}
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
                 className="relative z-50 p-2 hover:bg-green-50"
               >
                 <div className="relative w-6 h-6">
                   <span
-                    className={`absolute block h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out ${
+                    className={`absolute block h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out ${
                       isMobileMenuOpen ? "rotate-45 translate-y-2" : "translate-y-0"
                     }`}
                   />
                   <span
-                    className={`absolute block h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out translate-y-2 ${
+                    className={`absolute block h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out translate-y-2 ${
                       isMobileMenuOpen ? "opacity-0" : "opacity-100"
                     }`}
                   />
                   <span
-                    className={`absolute block h-0.5 w-6 bg-gray-600 transform transition duration-300 ease-in-out translate-y-4 ${
+                    className={`absolute block h-0.5 w-6 bg-gray-600 transition duration-300 ease-in-out translate-y-4 ${
                       isMobileMenuOpen ? "-rotate-45 -translate-y-2" : "translate-y-0"
                     }`}
                   />
@@ -117,7 +118,7 @@ export function Header() {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-8">
               <Link href="/" className="text-green-600 font-semibold relative group py-2">
                 Home
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-100 transition-transform"></span>
@@ -153,50 +154,54 @@ export function Header() {
 
           {/* Mobile Menu */}
           <div
-            className={`md:hidden absolute top-full left-0 w-full bg-white shadow-xl rounded-b-2xl overflow-hidden transition-all duration-300 ${
-              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-xl rounded-b-2xl overflow-auto transition-all duration-300 ease-in-out ${
+              isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}
           >
             <div className="px-6 py-8 space-y-6">
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200"
+                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200 relative group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Home</span>
                 </div>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
               </Link>
               <Link
                 href="/about"
-                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200"
+                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200 relative group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>About</span>
                 </div>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
               </Link>
               <Link
                 href="/campus"
-                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200"
+                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200 relative group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Campus</span>
                 </div>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
               </Link>
               <Link
                 href="/register"
-                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200"
+                className="block text-gray-700 hover:text-green-600 font-medium py-3 px-4 rounded-lg hover:bg-green-50 transition-all duration-200 relative group"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span>Register</span>
                 </div>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-600 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
               </Link>
               <Link href="/contact" className="block" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3 rounded-full font-medium">
@@ -214,6 +219,24 @@ export function Header() {
                   <div className="flex items-center space-x-3">
                     <Mail className="w-4 h-4 text-green-600" />
                     <span>info@misskhadija.edu.pk</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <MapPin className="w-4 h-4 text-green-600" />
+                    <span>Karachi, Pakistan</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <span>Follow Us:</span>
+                    <div className="flex space-x-2">
+                      <a href="#" className="hover:text-green-600 transition-colors" aria-label="Facebook">
+                        Facebook
+                      </a>
+                      <a href="#" className="hover:text-green-600 transition-colors" aria-label="Instagram">
+                        Instagram
+                      </a>
+                      <a href="#" className="hover:text-green-600 transition-colors" aria-label="Twitter">
+                        Twitter
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

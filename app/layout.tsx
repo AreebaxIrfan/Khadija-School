@@ -1,5 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { Header } from "@/components/layout/header"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
@@ -39,7 +40,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#059669" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header/>
+        {children}</body>
     </html>
   )
 }

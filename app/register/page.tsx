@@ -14,6 +14,7 @@ import { BookOpen, User, FileText, CheckCircle, Upload } from 'lucide-react';
 import Link from 'next/link';
 import { Footer } from '@/components/layout/footer';
 import { RegistrationFormData } from '@/sanity/types/registration';
+import { HeaderCampus } from '@/components/layout/header-campus';
 
 const initialFormData: RegistrationFormData = {
   firstName: '',
@@ -149,7 +150,8 @@ export default function RegisterPage() {
     switch (currentStep) {
       case 1:
         return (
-          <div className="space-y-4">
+          <div className="space-y-9">
+          
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <BookOpen className="h-5 w-5" /> Student Information
             </h3>
@@ -259,7 +261,7 @@ export default function RegisterPage() {
         );
       case 2:
         return (
-          <div className="space-y-4">
+          <div className="space-y-9">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <User className="h-5 w-5" /> Parent/Guardian Information
             </h3>
@@ -371,7 +373,7 @@ export default function RegisterPage() {
         );
       case 3:
         return (
-          <div className="space-y-4">
+          <div className="space-y-9">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <FileText className="h-5 w-5" /> Additional Information
             </h3>
@@ -426,7 +428,7 @@ export default function RegisterPage() {
         );
       case 4:
         return (
-          <div className="space-y-4">
+          <div className="space-y-9">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <CheckCircle className="h-5 w-5" /> Agreements
             </h3>
@@ -468,7 +470,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted flex flex-col">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted flex flex-col mt-12">
       <main className="flex-grow container mx-auto px-4 py-12">
         <Card className="max-w-3xl mx-auto">
           <CardHeader>

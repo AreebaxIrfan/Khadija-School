@@ -9,10 +9,6 @@ import { Footer } from "@/components/layout/footer"
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100">
-      {/* Navigation */}
-      <Header />
-
-      {/* Announcement Banner */}
       <AnnouncementBanner />
 
       {/* Hero Section */}
