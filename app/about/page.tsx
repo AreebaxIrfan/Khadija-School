@@ -1,13 +1,9 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BookOpen, Users, Award, Target, Eye, Heart, Star, ChevronRight, Phone, Mail, MapPin, Send } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
-import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { CTASection } from "@/components/home/cta-section"
-import { HeaderCampus } from "@/components/layout/header-campus"
 
 export default function AboutPage() {
   return (
@@ -88,8 +84,8 @@ export default function AboutPage() {
               {
                 name: "Umer Khan",
                 role: "Founder & Principal",
-                image: "/placeholder.svg?height=300&width=300",
-                bio: "With over 20 years in education, Dr. Kadija founded the school with a vision to transform learning.",
+                image: "/u.png",
+                bio: "With over 20 years in education,Sir Umer Khan founded the school with a vision to transform learning.",
               },
               {
                 name: "Prof. Hassan Ahmed",

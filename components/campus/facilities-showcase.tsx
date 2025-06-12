@@ -25,16 +25,6 @@ const facilities = [
     features: ["Latest Computers", "High-Speed Internet", "Programming Software", "Multimedia Tools"],
   },
   {
-    icon: Microscope,
-    title: "Research & Innovation Lab",
-    description:
-      "Dedicated space for student research projects with advanced microscopes, measurement tools, and equipment for scientific investigation and innovation.",
-    image: "/placeholder.svg?height=200&width=300",
-    gradient: "from-teal-500 to-teal-600",
-    bgGradient: "from-teal-50 to-teal-100",
-    features: ["Digital Microscopes", "Research Tools", "Project Space", "Innovation Hub"],
-  },
-  {
     icon: BookOpen,
     title: "Digital Library & Resource Center",
     description:
@@ -54,16 +44,7 @@ const facilities = [
     bgGradient: "from-amber-50 to-amber-100",
     features: ["Interactive Boards", "Math Tools", "Calculators", "Visual Aids"],
   },
-  {
-    icon: Wifi,
-    title: "Smart Classrooms",
-    description:
-      "Technology-integrated classrooms with projectors, smart boards, audio systems, and wireless connectivity for modern interactive learning experiences.",
-    image: "/placeholder.svg?height=200&width=300",
-    gradient: "from-emerald-500 to-emerald-600",
-    bgGradient: "from-emerald-50 to-emerald-100",
-    features: ["Smart Boards", "Projectors", "Audio Systems", "WiFi Access"],
-  },
+ 
 ]
 
 export function FacilitiesShowcase() {
