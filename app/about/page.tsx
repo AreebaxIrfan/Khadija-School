@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BookOpen, Users, Award, Target, Eye, Heart, Star, ChevronRight, Phone, Mail, MapPin, Send } from "lucide-react"
+import { BookOpen, Users, Award, Target, Eye, Heart, Star} from "lucide-react"
 import Image from "next/image"
 import { Footer } from "@/components/layout/footer"
 import { CTASection } from "@/components/home/cta-section"
