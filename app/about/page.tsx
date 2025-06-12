@@ -93,6 +93,7 @@ export default function AboutPage() {
                 image: "/placeholder.svg?height=300&width=300",
                 bio: "Leading our academic programs with expertise in curriculum development and educational innovation.",
               },
+              
               {
                 name: "Ms. Sarah Johnson",
                 role: "Student Affairs Director",
